@@ -272,7 +272,19 @@ p {
 }
 
 /* -----------Форма модального окна-------------- */
+.modal-form {
+  width: 528px;
+  height: 581px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+
+  outline: 1px solid teal;
+}
+
 .modal-text {
+  margin-bottom: 12px;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -282,12 +294,32 @@ p {
   color: var(--primary-text-color);
 }
 
+.form-section {
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 10px;
+
+  outline: 1px solid hotpink;
+}
+
 .form-section label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
+}
+
+.form-section input {
+  width: 100%;
+}
+
+.form-section textarea {
+  margin-bottom: 20px;
+}
+
+.agreement-section {
+  margin-bottom: 30px;
 }
 
 .agreement {
@@ -304,6 +336,9 @@ p {
 }
 
 .send {
+  width: 200px;
+  height: 50px;
+
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
