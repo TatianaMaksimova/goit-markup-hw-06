@@ -66,6 +66,35 @@
                 <use href="./images/icons.svg#close"></use>
               </svg>
             </button>
+            <form class="modal-form">
+              <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+              <div class="form-section">
+                <label class="">Имя<input type="text" name="name" /></label>
+              </div>
+              <div class="form-section">
+                <label class="">Телефон<input type="tel" name="tel" /></label>
+              </div>
+              <div class="form-section">
+                <label class="">Почта<input type="email" name="mail" /></label>
+              </div>
+              <div class="form-section">
+                <label class=""
+                  >Комментарий<textarea
+                    name="comment"
+                    cols="30"
+                    rows="10"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="agreement">
+                  <input type="checkbox" name="checkbox" />
+                  Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+                </label>
+              </div>
+              <button type="submit" class="send"><span class="send-text">Отправить</span></button>
+            </form>
           </div>
         </div>
       </section>
@@ -376,6 +405,7 @@
 
     <footer class="finish">
       <div class="container">
+        <!-- Логотип, адрес, контакты -->
         <div class="footer">
           <a href="#" class="logo foot"><span class="accent">Web</span>Studio</a>
           <address class="address">
@@ -390,7 +420,8 @@
             </ul>
           </address>
         </div>
-        <div>
+        <!-- Присоединяйтесь! -->
+        <div class="foot-links">
           <h2 class="call">присоединяйтесь</h2>
           <ul class="links-foot-list">
             <li class="links-item">
@@ -423,6 +454,19 @@
             </li>
           </ul>
         </div>
+        <!-- Форма для рассылки -->
+        <form class="form">
+          <label>
+            <p class="action">Подпишитесь на рассылку</p>
+            <input type="email" name="mail" placeholder="E-mail" />
+          </label>
+          <button type="submit" class="email-submit">
+            <span class="submit-sub">Подписаться</span>
+            <svg class="form-icon" width="24" height="24">
+              <use href="./images/icons.svg#send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
 
