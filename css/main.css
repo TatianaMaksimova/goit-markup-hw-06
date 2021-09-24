@@ -273,13 +273,9 @@ p {
 
 /* -----------Форма модального окна-------------- */
 .modal-form {
-  width: 528px;
-  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
-
-  outline: 1px solid teal;
 }
 
 .modal-text {
@@ -295,35 +291,91 @@ p {
 }
 
 .form-section {
-  /* display: flex;
-  flex-direction: column; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+}
 
-  outline: 1px solid hotpink;
+.textarea {
+  margin: 0;
 }
 
 .form-section label {
+  margin-bottom: 4px;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.01em;
+  text-align: start;
   color: var(--secondary-text-color);
 }
 
 .form-section input {
   width: 100%;
+  margin: 0;
+  padding: 11px 12px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
 }
 
 .form-section textarea {
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  resize: none;
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .agreement-section {
+  display: inline-block;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
+.agreement-section input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .agreement {
-  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+.agreement span {
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -335,11 +387,21 @@ p {
   color: var(--accent-color);
 }
 
+.agreement-icon {
+  display: inline-block;
+  margin-right: 8.38px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
 .send {
+  padding: 10px 55px;
+
   width: 200px;
   height: 50px;
 
   background-color: var(--accent-color);
+  border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
