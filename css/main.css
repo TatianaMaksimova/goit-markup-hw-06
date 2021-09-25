@@ -6,7 +6,7 @@
   --icon-fon: #f5f4fa;
   --icon-primary-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration: 250ms;
+  --duration: 2500ms;
 }
 
 body {
@@ -229,8 +229,8 @@ p {
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 528px;
+  max-height: 581px;
 
   background-color: var(--bgd-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -266,9 +266,13 @@ p {
   cursor: pointer;
 }
 
+.modal-button:hover .modal-close,
+.modal-button:focus .modal-close {
+  fill: var(--accent-color);
+}
+
 .modal-close {
-  border: 1px solid transparent;
-  color: #000000;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 /* -----------Форма модального окна-------------- */
@@ -324,20 +328,18 @@ p {
   top: 50%;
   left: 12px;
 
-  fill: currentColor;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  /* transition: border-color var(--duration) var(--timing-function); */
 }
 
-.input:hover,
-.input:focus {
-  border-color: var(--accent-color);
-}
-
-.input:hover .modal-icon .input:focus .modal-icon {
+.form-section .input:hover + .modal-icon,
+.input:focus + .modal-icon {
   fill: var(--accent-color);
 }
 
@@ -401,12 +403,20 @@ textarea::placeholder {
 
 .agreement-icon {
   display: inline-block;
+  width: 15px;
+  height: 15px;
   margin-right: 8.38px;
-  background-color: var(--bgd-text-color);
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
 
-  transition: border-color var(--duration) var(--timing-function);
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-origin: border-box;
+
+  transition: border-color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
 .checkbox:checked ~ .agreement-icon {
@@ -976,7 +986,8 @@ a {
 
   width: 200px;
   height: 50px;
-  background: var(--accent-color);
+  border: 2px solid transparent;
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
