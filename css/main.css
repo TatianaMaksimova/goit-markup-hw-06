@@ -317,14 +317,28 @@ p {
   margin: 0;
   padding: 11px 12px;
   padding-left: 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .modal-icon {
   position: absolute;
   top: 50%;
   left: 12px;
+
+  fill: currentColor;
+}
+
+.input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--accent-color);
+}
+
+.input:hover .modal-icon .input:focus .modal-icon {
+  fill: var(--accent-color);
 }
 
 .form-section textarea {
@@ -336,8 +350,6 @@ p {
 
   width: 448px;
   height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 
   resize: none;
 }
@@ -390,8 +402,16 @@ textarea::placeholder {
 .agreement-icon {
   display: inline-block;
   margin-right: 8.38px;
+  background-color: var(--bgd-text-color);
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.checkbox:checked ~ .agreement-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
 }
 
 .send {
