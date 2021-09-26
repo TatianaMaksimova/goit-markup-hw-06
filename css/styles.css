@@ -339,12 +339,12 @@ p {
   transition: border-color var(--duration) var(--timing-function);
 }
 
-.input:hover,
+/* .input:hover, */
 .input:focus {
   border-color: var(--accent-color);
 }
 
-.form-section .input:hover + .modal-icon,
+/* .form-section .input:hover + .modal-icon, */
 .input:focus + .modal-icon {
   fill: var(--accent-color);
 }
